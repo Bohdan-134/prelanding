@@ -1,0 +1,141 @@
+@import './utils/main.utils.scss';
+body {
+    background: linear-gradient(90deg, #210440 0%, #FDB095 100%);
+    padding: 100px 20px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 80px 0;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(33, 4, 64, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    @include flex(column, null, center);
+}
+
+.image-wrapp {
+    position: relative;
+    margin: 210px 0 250px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: $COLOR__YELLOW;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .decor-img {
+        position: absolute;
+        border-radius: 50%;
+    }
+    .decor-img-s {
+        width: 100px;
+        height: 100px;
+        background-color: $COLOR__LILAC;
+        right: 0;
+        bottom: 15px;
+    }
+    .decor-img-m {
+        width: 120px;
+        height: 120px;
+        background-color: $COLOR__YELLOW;
+        right: -120px;
+        top: -10px;
+    }
+    .decor-img-l {
+        width: 150px;
+        height: 150px;
+        background-color: $COLOR__PINK;
+        left: -57px;
+        top: -110px;
+    }
+}
+
+#form {
+    margin-top: 70px;
+    margin-bottom: 135px;
+    margin: 70px 0 135px;
+    @include flex(column, null, center);
+    input {
+        padding: 16px 10px;
+        margin-bottom: 25px;
+        min-width: 500px;
+        border: 1px solid #FDB095;
+        border-radius: 20px;
+        background-color: transparent;
+        text-align: center;
+        @include font(15px, 400, 18px, rgba(255, 255, 255, 0.7));
+        &::placeholder {
+            @include font(15px, 400, 18px, rgba(255, 255, 255, 0.7));
+        }
+    }
+    button {
+        margin-top: 20px;
+        background-color: transparent;
+        color: $COLOR__YELLOW;
+        transition: .3s;
+        @include font(15px, 400, 18px, $COLOR__YELLOW);
+        &:hover {
+            color: $COLOR__LILAC;
+        }
+    }
+}
+
+.social-link-list {
+    margin-top: 25px;
+    @include flex(row, center, center);
+    .social-link-item {
+        position: relative;
+        margin: 0 10px;
+        padding: 10px;
+        border-radius: 50%;
+        a {
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width:750px) {
+    body {
+        padding: 0;
+    }
+    .wrapper {
+        border-radius: 0px;
+        padding: 60px 0;
+        max-width: 100%;
+    }
+    .image-wrapp {
+        width: 250px;
+        height: 250px;
+        margin: 110px 0 150px;
+        svg {
+            width: 80%;
+        }
+        .decor-img-s {
+            width: 70px;
+            height: 70px;
+        }
+        .decor-img-m {
+            width: 100px;
+            height: 100px;
+            right: -100px;
+        }
+        .decor-img-l {
+            width: 120px;
+            height: 120px;
+            top: -40px;
+        }
+    }
+    #form {
+        input {
+            min-width: 300px;
+        }
+    }
+}

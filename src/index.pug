@@ -1,0 +1,37 @@
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap' rel='stylesheet')
+        link(rel="stylesheet", href="./css/main.css")
+        title Pre landing
+    body
+        .wrapper
+            h1.h1 Не витрачайте гроші на пилосос – виграйте Dyson безкоштовно!
+            .image-wrapp
+                include ./img/image.svg
+                .decor-img-s.decor-img
+                .decor-img-m.decor-img
+                .decor-img-l.decor-img
+            h2.h2 Як брати участь у розіграші?
+            p.subtitle Просто заповніть форму нижче з вашим ім'ям та адресою електронної пошти. Ми зв'яжемося з переможцем електронною поштою після закінчення конкурсу. Успіхів!
+            form#form
+                input(type="text" placeholder="Ім'я").i-text
+                input(type="email" placeholder="Електронна пошта").i-mail
+                button(type="submit").i-btn Брати участь в конкурсі
+            .share
+                h2.h2 Поділіться цим конкурсом із друзями:
+                ul.social-link-list
+                    li.social-link-item
+                        a(href="#")
+                            include ./img/facebook.svg
+                    li.social-link-item
+                        a(href="#")
+                            include ./img/twitter.svg
+                    li.social-link-item
+                        a(href="#")
+                            include ./img/instagram.svg
